@@ -58,17 +58,23 @@ namespace ShapeTracker
       Console.WriteLine("Your result is: " + result + ".");
       Console.WriteLine("-----------------------------------------");
       Console.WriteLine("What's next?");
-      Console.WriteLine("Would you like to check a new triangle (new)?");
-      Console.WriteLine("Please enter 'new' to check the type of a new triangle. To exit, enter any key.");
+      Console.WriteLine("Would you like to check a new triangle or rectangle?");
+      Console.WriteLine("Please enter 'triangle' to check the type of a new triangle. Please enter 'rectangle' to check the type of a new rectangle To exit, enter any key.");
       string userResponse = Console.ReadLine(); 
-      if (userResponse == "new" || userResponse == "New")
+      if (userResponse == "triangle" || userResponse == "Triangle")
       {
         Main();
+      }
+      else if (userResponse == "rectangle" || userResponse == "Rectangle")
+      {
+        CreateRectangle();
       }
       else
       {
         Console.WriteLine("Goodbye!");
       }
+         static void CreateRectangle();
+    Rectangle tri = new Rectangle(length1, length2);
     }
   }
 }
